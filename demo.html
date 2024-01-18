@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Button Animation</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .container .right-div {
+    
+    height: 100vh; 
+    background-color:blue ;/* Set the container height to the full height of the window */
+  }
+  
+  .left-button {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .right-div {
+    flex-grow: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .container:hover .left-button {
+    transform: translateY(10px); /* Add a subtle lift effect on hover */
+  }
+  
+  .container:hover .right-div {
+    transform: translateY(0);
+  }
+</style>
+<body>
+    <div class="mainsection" style="display: flex;">
+  <div class="container" style="display: table;">
+    <button class="left-button" style="display: table;">01/ Website Design</button>
+    <button class="left-button" style="display: table;">02/ Digital Marketing</button>
+    <button class="left-button" style="display: table;">03/ Reputation Management</button>
+    <button class="left-button" style="display: table;">04/mobile Apps</button>
+</div>
+
+    <div class="right-div">Content here</div>
+</div>
+</body>
+</html>
